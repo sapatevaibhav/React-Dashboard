@@ -75,12 +75,9 @@ There is no need to play with this area
   font-size: 13px;
 }
 
-
 /*
 Please do not touch above area at all
 */
-
-
 
 .main-content {
   margin-left: 280px;
@@ -89,7 +86,7 @@ Please do not touch above area at all
   flex: 1;
 }
 
-@media (min-width:960) {
+@media (min-width: 960) {
   .main-content {
     margin-right: 80px;
   }
@@ -123,7 +120,6 @@ header {
   align-items: start;
   min-width: 200px;
 }
-
 
 .metric-icon {
   width: 30px;
@@ -171,14 +167,6 @@ header {
 
 /**/
 
-
-.charts {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
 .search-profile {
   display: flex;
   align-items: center;
@@ -211,7 +199,6 @@ header {
   right: 20px;
   width: 17px;
   height: 17px;
-  /* pointer-events: none; */
   cursor: pointer;
 }
 
@@ -220,10 +207,54 @@ header {
   height: 17px;
 }
 
+.charts {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .chart-container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 0px;
+}
+
+.charts-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chart-fullwidth {
+  padding: 20px;
+  width: 87%;
+  height: 250px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-halfwidth {
+  width: 50%;
+  height: 200px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-products-chart {
+  height: 100%;
+  background-color: #fff;
+  /* border: 2px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); */
 }
