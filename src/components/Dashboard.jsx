@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import ActivitiesChart from "./ActivitiesChart";
 import TopProductsChart from "./TopProductsChart";
-import AddProfile from "./AddProfile";
+import AddProfilePopup from "./AddProfilePopup";
+import "./Dashboard.css";
+import { ReactSVG } from "react-svg";
 
 const Dashboard = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [profile, setProfile] = useState(null);
+
   const metrics = [
     {
       icon: "assets/revenue_icon.png",
@@ -31,6 +36,11 @@ const Dashboard = () => {
       percentage: -5,
     },
   ];
+
+  const handleProfileSubmit = (profileData) => {
+    setProfile(profileData);
+    setIsPopupOpen(false);
+  };
 
   return (
     <div className="dashboard-container">
@@ -87,8 +97,76 @@ const Dashboard = () => {
           <div className="top-products">
             <TopProductsChart />
           </div>
-          <div className="add-profile-container">
-            <AddProfile />
+          <div className="profile-container">
+            {profile ? (
+              <div className="profile-details">
+                <h3 style={{ marginLeft: 40, marginTop: 40 }}>
+                  {profile.name}
+                </h3>
+                <div className="profile-row" style={{ marginLeft: 40 }}>
+                  <p style={{ width: "50%" }}>
+                    <a href={`tel:${profile.phone}`}>
+                      <img
+                        src="/assets/whatsapp.svg"
+                        style={{ height: 20, width: 20, marginRight: 10 }}
+                        className="icon"
+                      />
+                      {profile.phone}
+                    </a>
+                  </p>
+                  {profile.instagram && (
+                    <p style={{ width: "50%", marginLeft: 20 }}>
+                      <a href={`https://instagram.com/@${profile.instagram}`}>
+                        <img
+                          src="/assets/insta.svg"
+                          style={{ height: 20, width: 20, marginRight: 10 }}
+                          className="icon"
+                        />
+                        {profile.instagram}
+                      </a>
+                    </p>
+                  )}
+                </div>
+                <div className="profile-row" style={{ marginLeft: 40 }}>
+                  <p style={{ width: "50%" }}>
+                    <img
+                      src="/assets/mail.svg"
+                      style={{ height: 20, width: 20, marginRight: 10 }}
+                      className="icon"
+                    />
+                    <a href={`mailto:${profile.email}`}>{profile.email}</a>
+                  </p>
+                  {profile.youtube && (
+                    <p style={{ width: "50%", marginLeft: 20 }}>
+                      <img
+                        src="/assets/youtube.svg"
+                        style={{ height: 20, width: 20, marginRight: 10 }}
+                        className="icon"
+                      />
+                      <a href={`https://youtube.com/@${profile.youtube}`}>
+                        {profile.youtube}
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+            ) : (
+              <div
+                className="add-profile-button"
+                onClick={() => setIsPopupOpen(true)}
+              >
+                <div className="circle">
+                  <span className="plus-icon">+</span>
+                </div>
+                <p className="add-profile-text">Add Profile</p>
+              </div>
+            )}
+            {isPopupOpen && (
+              <AddProfilePopup
+                onClose={() => setIsPopupOpen(false)}
+                onSubmit={handleProfileSubmit}
+              />
+            )}
           </div>
         </div>
       </div>
