@@ -1,7 +1,8 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Sidebar from "./Sidebar";
 import ActivitiesChart from "./ActivitiesChart";
 import TopProductsChart from "./TopProductsChart";
+import AddProfile from "./AddProfile";
 
 const Dashboard = () => {
   const metrics = [
@@ -78,15 +79,16 @@ const Dashboard = () => {
               </div>
             </div>
           ))}
-        </div>{" "}
+        </div>
+        <div className="activities-chart">
+          <ActivitiesChart />
+        </div>
         <div className="charts-container">
-          <div className="chart-fullwidth">
-            <ActivitiesChart />
+          <div className="top-products">
+            <TopProductsChart />
           </div>
-          <div className="chart-halfwidth">
-            <div className="top-products-chart">
-              <TopProductsChart />
-            </div>
+          <div className="add-profile-container">
+            <AddProfile />
           </div>
         </div>
       </div>

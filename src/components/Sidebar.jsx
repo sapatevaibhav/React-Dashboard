@@ -1,5 +1,5 @@
-import React from 'react';
-import { ReactSVG } from 'react-svg';
+import React from "react";
+import { ReactSVG } from "react-svg";
 
 const Sidebar = React.memo(() => (
   <div className="sidebar">
@@ -9,7 +9,9 @@ const Sidebar = React.memo(() => (
         <ul className="sidebar-list">
           <li className="sidebar-item">
             <ReactSVG src="/assets/dashboard_icon.svg" className="icon" />
-            <span className="sidebar-text"><b>Dashboard</b></span>
+            <span className="sidebar-text">
+              <b>Dashboard</b>
+            </span>
           </li>
           <li className="sidebar-item">
             <ReactSVG src="/assets/transaction_icon.svg" className="icon" />
