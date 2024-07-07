@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // src/index.js
-import './styles.css';
+import './Dashboard.css';
 
 // ReactDOM.render(
 //   <React.StrictMode>

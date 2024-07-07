@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
-import Dashboard from './components/Dashboard';
+import SignIn from './components/SignIn';
 import './App.css';
 
 function App() {
-  return <Dashboard />;
+  return <SignIn />;
 }
 
 export default App;

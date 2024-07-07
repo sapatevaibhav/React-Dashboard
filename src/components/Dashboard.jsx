@@ -3,8 +3,7 @@ import Sidebar from "./Sidebar";
 import ActivitiesChart from "./ActivitiesChart";
 import TopProductsChart from "./TopProductsChart";
 import AddProfilePopup from "./AddProfilePopup";
-import "./Dashboard.css";
-import { ReactSVG } from "react-svg";
+import "../Dashboard.css";
 
 const Dashboard = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -110,6 +109,7 @@ const Dashboard = () => {
                         src="/assets/whatsapp.svg"
                         style={{ height: 20, width: 20, marginRight: 10 }}
                         className="icon"
+                        alt="whatsapp"
                       />
                       {profile.phone}
                     </a>
@@ -118,6 +118,7 @@ const Dashboard = () => {
                     <p style={{ width: "50%", marginLeft: 20 }}>
                       <a href={`https://instagram.com/@${profile.instagram}`}>
                         <img
+                          alt="insta"
                           src="/assets/insta.svg"
                           style={{ height: 20, width: 20, marginRight: 10 }}
                           className="icon"
@@ -130,6 +131,7 @@ const Dashboard = () => {
                 <div className="profile-row" style={{ marginLeft: 40 }}>
                   <p style={{ width: "50%" }}>
                     <img
+                    alt="mail"
                       src="/assets/mail.svg"
                       style={{ height: 20, width: 20, marginRight: 10 }}
                       className="icon"
@@ -140,6 +142,7 @@ const Dashboard = () => {
                     <p style={{ width: "50%", marginLeft: 20 }}>
                       <img
                         src="/assets/youtube.svg"
+                        alt="youtube"
                         style={{ height: 20, width: 20, marginRight: 10 }}
                         className="icon"
                       />

@@ -69,7 +69,7 @@ const ActivitiesChart = React.memo(() => {
   };
 
   return (
-    <div className="chart-container" style={{ height: "300px" }}>
+    <div className="chart-container" style={{ height: "400px" }}>
       <div className="chart-title">Activities</div>
       <div className="chart-subtitle">May - June 2021</div>
       <Bar data={data} options={options} />

@@ -1,0 +1,470 @@
+  .add-profile-container,
+  .chart-container,
+  .sidebar {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .chart-fullwidth,
+  .chart-halfwidth,
+  .metric,
+  .profile-container,
+  .top-products {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  .add-profile-container,
+  .chart-container {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 2px solid #ddd;
+  }
+  .add-profile-container,
+  .circle,
+  .dashboard-container,
+  .metric,
+  .metric-details,
+  .metric-value-percentage,
+  .metrics,
+  .sidebar,
+  .sidebar nav .sidebar-item,
+  .top-products,
+  header {
+    display: flex;
+    display: flex;
+  }
+  .activities-chart {
+    max-height: 350px;
+    overflow-y: scroll;
+  }
+  .add-profile-container {
+    flex: 1;
+    min-width: 45%;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .sidebar {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .metric,
+  .top-products,
+  .top-products-chart {
+    background-color: #fff;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  .chart-container {
+    border-radius: 20px;
+    padding: 10px 20px 20px;
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+  }
+  .chart-fullwidth,
+  .chart-halfwidth {
+    border: 2px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 225px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  .chart-halfwidth {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  .metric {
+    flex-direction: column;
+    align-items: start;
+    min-width: 200px;
+    border: 2px solid #ddd;
+    flex: 1 1 200px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .sidebar nav .sidebar-item {
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 23px;
+  }
+  .sidebar nav .sidebar-item .icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 13px;
+  }
+  .sidebar nav .sidebar-item .sidebar-text {
+    font-size: 17px;
+  }
+  .sidebar-list {
+    padding: 0;
+  }
+  .sidebar .bottom-options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .form .buttons,
+  .form button,
+  .profile-container,
+  .top-products {
+    margin-top: 20px;
+  }
+  .sidebar .bottom-options ul li {
+    cursor: pointer;
+    font-size: 13px;
+  }
+  header {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .top-products {
+    flex: 1;
+    min-width: 45%;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .top-products-chart {
+    height: 100%;
+  }
+  .add-profile-button .circle,
+  .circle {
+    width: 80px;
+    height: 80px;
+    background-color: #d1dbe1c6;
+  }
+  .circle {
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .add-profile-button .plus-icon,
+  .plus-icon {
+    font-size: 48px;
+    color: #8c8b8b;
+  }
+  .add-profile-button .add-profile-text,
+  .add-profile-text {
+    font-size: 16px;
+    color: #8c8b8b;
+  }
+  .dashboard-container {
+    flex-direction: column;
+    height: 100vh;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .metrics {
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    justify-content: space-between;
+  }
+  .metric-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 4px;
+  }
+  .metric-details {
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+  }
+  .metric-name {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: start;
+  }
+  .form label,
+  .profile-row {
+    margin-bottom: 10px;
+  }
+  .metric-value-percentage {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .metric-value {
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  .metric-percentage {
+    font-size: 14px;
+    padding: 3px 8px;
+    border: none;
+    border-radius: 15px;
+    background-color: #e9f9eb;
+    display: inline-block;
+    width: fit-content;
+    color: inherit;
+  }
+  .search-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .search-profile img {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+  }
+  .search-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .search-input-container input {
+    padding: 10px 40px 10px 10px;
+    border-radius: 10px;
+    border: none;
+    width: 170px;
+    height: 13px;
+    font-size: 16px;
+  }
+  .search-icon {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+  .charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .chart-title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .chart-subtitle {
+    font-size: 16px;
+    color: #777;
+  }
+  @media (min-width: 960px) {
+    .add-profile-container,
+    .top-products {
+      width: calc(50% - 10px);
+      min-width: 50%;
+      max-width: 50%;
+    }
+    .sidebar {
+      width: 230px;
+      left: 30px;
+      top: 25px;
+      bottom: 25px;
+      position: fixed;
+    }
+    .chart-halfwidth {
+      width: 45%;
+      min-width: 45%;
+      width: calc(50% - 10px);
+    }
+    .dashboard-container {
+      flex-direction: row;
+    }
+    .main-content {
+      margin-left: 280px;
+      margin-right: 80px;
+    }
+    .metrics {
+      justify-content: center;
+    }
+  }
+  .add-profile-container,
+  .top-products {
+    height: 275px;
+  }
+  .tabs button {
+    flex: 1;
+  }
+  .tabs .active {
+    border-bottom: 2px solid #000;
+  }
+  .profile-container {
+    width: 47%;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+  }
+  .profile-container .circle {
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+  .add-profile-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-height: 275px;
+    height: 275px;
+  }
+  .add-profile-button .circle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .profile-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .profile-row a {
+    color: #000;
+    font-size: 13px;
+  }
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 350px;
+  }
+  .back,
+  .next {
+    width: 20%;
+  }
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .tabs button {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    background: 0 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease-in;
+    font-weight: 700;
+  }
+  .tabs button.active {
+    border-bottom: 3px solid #3b82f6;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 95%;
+  }
+  .form .buttons .button,
+  .popup-content button.close {
+    color: #fff;
+    border: none;
+    padding: 10px;
+    transition: background 0.3s;
+  }
+  .form .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .form .buttons .button {
+    background: #3b82f6;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .form .buttons .button:hover {
+    background: #1c6ed2;
+  }
+  .form .buttons .button:last-child {
+    margin-right: 0;
+  }
+  .popup-content button.close {
+    margin-top: 20px;
+    background: #e74c3c;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .close-button,
+  .next {
+    border: none;
+    cursor: pointer;
+  }
+  .popup-content button.close:hover {
+    background: #c0392b;
+  }
+  h3 {
+    margin: 0 0 5px;
+  }
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .close-button {
+    background: 0 0;
+    color: #333;
+    font-size: 16px;
+  }
+  .separator {
+    height: 1px;
+    background-color: #989595a9;
+    margin: 10px 0;
+  }
+  .error {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+  }
+  .next {
+    align-self: flex-end;
+    padding: 10px;
+    background: #3b82f6;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+    flex: 1;
+    margin-right: 10px;
+  }

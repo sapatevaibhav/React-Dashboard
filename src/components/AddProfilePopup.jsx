@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddProfilePopup.css";
+import "../Dashboard.css";
 
 const AddProfilePopup = ({ onClose, onSubmit }) => {
   const [step, setStep] = useState("basic");
@@ -10,6 +10,7 @@ const AddProfilePopup = ({ onClose, onSubmit }) => {
     instagram: "",
     youtube: "",
   });
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,11 +18,33 @@ const AddProfilePopup = ({ onClose, onSubmit }) => {
       ...prevProfile,
       [name]: value,
     }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: "",
+    }));
+  };
+
+  const handleNext = () => {
+    setStep("social");
+  };
+
+  const handleBack = () => {
+    setStep("basic");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(profile);
+    const newErrors = {};
+    if (!profile.name) newErrors.name = "This item is required";
+    if (!profile.email) newErrors.email = "This item is required";
+    if (!profile.phone) newErrors.phone = "This item is required";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setStep("basic");
+    } else {
+      onSubmit(profile);
+    }
   };
 
   return (
@@ -50,57 +73,72 @@ const AddProfilePopup = ({ onClose, onSubmit }) => {
           {step === "basic" && (
             <>
               <label>
-                Name:
+                Enter Name*
                 <input
                   type="text"
                   name="name"
+                  required
+                  placeholder={errors.name || "Eg. John Doe"}
                   value={profile.name}
                   onChange={handleChange}
+                  style={{ borderColor: errors.name ? 'red' : '' }}
                 />
               </label>
               <label>
-                Email:
+                Enter Email*
                 <input
                   type="email"
                   name="email"
+                  required
+                  placeholder={errors.email || "Eg. john@xyz.com"}
                   value={profile.email}
                   onChange={handleChange}
+                  style={{ borderColor: errors.email ? 'red' : '' }}
                 />
               </label>
               <label>
-                Phone:
+                Enter Phone*
                 <input
                   type="text"
                   name="phone"
+                  required
+                  placeholder={errors.phone || "Eg. 9876543210"}
                   value={profile.phone}
                   onChange={handleChange}
+                  style={{ borderColor: errors.phone ? 'red' : '' }}
                 />
               </label>
+              <button type="button" className="next" onClick={handleNext}>Next</button>
             </>
           )}
           {step === "social" && (
             <>
               <label>
-                Instagram:
+                Instagram<small> (Optional)</small>
                 <input
                   type="text"
                   name="instagram"
+                  placeholder="Eg. username"
                   value={profile.instagram}
                   onChange={handleChange}
                 />
               </label>
               <label>
-                YouTube:
+               YouTube<small> (Optional)</small>
                 <input
                   type="text"
                   name="youtube"
+                  placeholder="Eg. johndoe"
                   value={profile.youtube}
                   onChange={handleChange}
                 />
               </label>
+              <div className="buttons">
+                <button type="button" className="button back" onClick={handleBack}>Back</button>
+                <button type="submit" className="button submit">Submit</button>
+              </div>
             </>
           )}
-          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
